@@ -1,0 +1,108 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="/static/css/resume.min.css" rel="stylesheet">
+    <title>Edit Details</title>
+</head>
+<body style="padding-left:2px">
+    <!-- <center><h2 class="p-3 mb-2 bg-info text-white">Edit Profile</h2></center>
+<form method="POST" enctype="multipart/form-data">
+{% csrf_token %}  -->
+<!-- <div class="form-group card" style="padding-left:10px; padding-top:10px">
+    <div class="from-group">
+    <p><label for="id_name">Name:</label> 
+    <input type="text" name="name" maxlength="100" required="" id="id_name" value="{{ employee.name }}"></p></div>
+
+    <p><label for="id_photo">Photo:</label> 
+    <input type="file" name="photo" accept="image/*" required="" id="id_photo" value="{{ employee.photo }}"></p>
+
+    <p><label for="id_email">Email:</label> 
+    <input type="email" name="email" maxlength="30" required="" id="id_email" value="{{ employee.email }}"></p>
+
+    <p><label for="id_mobile">Mobile:</label> 
+    <input type="number" name="mobile" min="0" required="" id="id_mobile" value="{{ employee.mobile }}"></p>
+
+    <p><label for="id_designation">Designation:</label> 
+    <input type="text" name="designation" maxlength="50" width="48" height="48"required="" id="id_designation" value="{{ employee.designation }}"></p>
+
+    <p><label for="id_skills">Skills:</label> 
+    <input type="text" name="skills" style="resize: horizontal; overflow: auto" maxlength="500" required="" id="id_skills" value="{{ employee.skills }}"></p>
+
+    <p><label for="id_about">About:</label> 
+    <input type="text" name="about" style="resize: horizontal; overflow: auto" maxlength="500" required="" id="id_about" value="{{ employee.about }}"></p>
+
+    
+    <p><label for="id_resume">Resume:</label> 
+    <input type="file" name="resume" required="" id="id_resume" value="{{ employee.resume }}"></p>
+   
+</div>
+<input type="submit" class="btn btn-primary"> -->
+<!-- </form> -->
+
+<center><h2 class="p-3 mb-2 bg-info text-white">Edit Profile</h2></center>
+<div class="container">
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %} 
+      <div class="form-group">
+        Name:
+        <input type="text" class="form-control" maxlength="50" name="name" placeholder="Enter Name"value="{{ employee.name }}" required>
+      </div>
+
+      <div>
+        Photo
+        <input type="file" name="photo" required value="{{ employee.photo }}">
+      </div><br>
+
+      <div class="form-group">
+        Email:
+        <input type="email" class="form-control" placeholder="Enter email" name="email" required value="{{ employee.email }}">
+      </div>
+
+      <div class="form-group">
+        Mobile:
+        <input type="number" class="form-control" placeholder="Enter mobile no." name="mobile" value="{{ employee.mobile }}"required>
+      </div>
+
+      <div class="form-group">
+        Designation:
+        <input type="text" class="form-control" placeholder="Enter designation" name="designation" value="{{ employee.designation }}" required>
+      </div>
+
+      <div class="form-group">
+        Skills:
+        <input type="text" rows="4" cols="50"class="form-control" placeholder="Skills" name="skills" value="{{ employee.skills }}" required></textarea>
+      </div>
+
+      <div class="form-group">
+        About:
+        <input type="text" rows="4" cols="50"class="form-control" placeholder="About us" name="about" value="{{ employee.about }}" required></textarea>
+      </div>
+
+      <div>
+        Resume
+        <input type="file" name="resume" value="{{ employee.resume }}" required>
+      </div><br>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+<script src="/static/vendor/jquery/jquery.min.js"></script>
+    <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="/static/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="/static/js/resume.min.js"></script>
+</body>
+</html>
